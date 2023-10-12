@@ -1,8 +1,25 @@
+import { Button } from "@mui/material";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
+import CssBaseline from "@mui/material/CssBaseline";
+
+const darkTheme = createTheme({
+  palette: {
+    mode: "dark",
+  },
+});
+
 function App() {
   return (
-    <>
-      <h1 className=" text-red-500 text-5xl">Hello World</h1>
-    </>
+    <ThemeProvider theme={darkTheme}>
+      <CssBaseline />
+      <center>
+        <div className="flex justify-center mt-96">
+          <Button variant="outlined" size="large">
+            Outlined
+          </Button>
+        </div>
+      </center>
+    </ThemeProvider>
   );
 }
 
